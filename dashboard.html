@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="../vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <div id="wrapper">
+      <!-- <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+    </ul> -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+            id="headeRnavBar"
+          ></nav>
+          <div class="container-fluid">
+            <div class="card o-hidden border-0 shadow-lg my-5">
+              <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row justify-content-center">
+                  <div class="col-lg-12">
+                    <div class="p-5">
+                      <div class="text-center">
+                        <h1 class="h4 text-gray-900 mb-4">Application Form</h1>
+                      </div>
+                      <form class="user">
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="firstName"
+                              placeholder="First Name"
+                            />
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="lastName"
+                              placeholder="Last Name"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="phone"
+                              placeholder="Mobile Number"
+                            />
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label>Gender</label><br />
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input
+                                  type="radio"
+                                  class="form-check-input"
+                                  name="gender"
+                                  checked
+                                  value="Male"
+                                />Male
+                              </label>
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input
+                                  type="radio"
+                                  class="form-check-input"
+                                  name="gender"
+                                  value="Female"
+                                />Female
+                              </label>
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input
+                                  type="radio"
+                                  class="form-check-input"
+                                  name="gender"
+                                  value="Other"
+                                />Other
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <select
+                              id="districtId"
+                              name="districtId"
+                              class="form-control"
+                            ></select>
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <select
+                              id="assemblyId"
+                              name="assemblyId"
+                              class="form-control"
+                            ></select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <select
+                              id="booth"
+                              name="booth"
+                              class="form-control"
+                            ></select>
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <select
+                              id="occupation"
+                              name="occupation"
+                              class="form-control"
+                            >
+                              <option value="">Select Occupation</option>
+                              <option value="Farmer">Farmer</option>
+                              <option value="Judge">Judge</option>
+                            </select>
+                          </div>
+                        </div>
+                        <label>Address</label>
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="houseNo"
+                              placeholder="House Number"
+                            />
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="streetName"
+                              placeholder="Street Name"
+                            />
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0 mt-2">
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="pinCode"
+                              placeholder="Pincode"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group row justify-content-center">
+                          <div class="col-sm-3 mb-3 mb-sm-0">
+                            <button
+                              class="btn btn-primary btn-user btn-block"
+                              id="save"
+                              type="submit"
+                            >
+                              Save
+                            </button>
+                          </div>
+                          <div class="col-sm-3 mb-3 mb-sm-0">
+                            <button
+                              class="btn btn-primary btn-user btn-block"
+                              id="saveContinue"
+                            >
+                              Save & Continue
+                            </button>
+                          </div>
+                        </div>
+                        <hr />
+
+                        <div
+                          class="container mt-4"
+                          id="display"
+                          style="display: none"
+                          float="left"
+                        >
+                          <h1 class="h3 mb-4 text-gray-800">
+                            Application Form for Gruhajyothi :
+
+                            <input
+                              style="width: 20px; height: 20px"
+                              type="checkbox"
+                              id="myCheck"
+                            />
+                          </h1>
+                          <p>200 units / monthof free electricity</p>
+                          <h4>
+                            Please enter your RR Number
+                            <input
+                              placeholder="enter here R.R number"
+                              type="number"
+                            />
+                          </h4>
+
+                          <button class="btn btn-primary btn-user" id="gruhId">
+                            Submit
+                          </button>
+                        </div>
+                        <div class="container" id="check" style="display: none">
+                          <h1 class="h3 mb-4 text-gray-800">
+                            Application Form for Gruhalakshmi :
+                            <input
+                              style="width: 20px; height: 20px"
+                              type="checkbox"
+                              id="oncheck"
+                            />
+                          </h1>
+                          <p>₹ 2000 to every woman head of the family</p>
+                        </div>
+                        <!-- /////////// -->
+                        <div
+                          class="container"
+                          id="forGruhalakshmi"
+                          style="display: none"
+                        >
+                          <div>
+                            <div style="display: flex; justify-content: center">
+                              <h1 class="h3 mb-4 text-gray-800">
+                                Application Form for Gruhalakshmi
+                              </h1>
+                            </div>
+
+                            <div style="display: flex; justify-content: center">
+                              <h5>₹ 2000 to every woman head of the family</h5>
+                            </div>
+
+                            <div style="display: flex; justify-content: center">
+                              <h3>
+                                Is the Gruhalakshmi applicant same as
+                                Gruhajyothi applicant
+                              </h3>
+                            </div>
+
+                            <div
+                              style="
+                                display: flex;
+                                justify-content: center;
+                                gap: 15px;
+                              "
+                            >
+                              <button class="btn btn-primary btn-user">
+                                Yes
+                              </button>
+                              <button
+                                class="btn btn-primary btn-user"
+                                id="clickNo"
+                              >
+                                No
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            style="
+                              display: flex;
+                              justify-content: center;
+                              margin-top: 15px;
+                            "
+                          >
+                            <button class="btn btn-primary">
+                              Save & Submit
+                            </button>
+                          </div>
+
+                          <div
+                            style="
+                              display: flex;
+                              justify-content: center;
+                              margin-top: 15px;
+                            "
+                          >
+                            <h2>Thank you for your application</h2>
+                          </div>
+
+                          <div
+                            style="
+                              display: flex;
+                              justify-content: center;
+                              margin-top: 15px;
+                            "
+                          >
+                            <h5>
+                              Your application no is :
+                              <h4>BANDSO39841839</h4>
+                            </h5>
+                          </div>
+                        </div>
+                      </form>
+                      <hr />
+                    </div>
+                  </div>
+                </div>
+                <!-- copyone -->
+                <div
+                  class="row justify-content-center"
+                  id="secondDiv"
+                  style="display: none"
+                >
+                  <div class="col-lg-12">
+                    <div class="p-5">
+                      <div class="text-center">
+                        <h1 class="h4 text-gray-900 mb-4">
+                          Application Form for Gruhalakshmi
+                        </h1>
+                      </div>
+                      <div class="text-center">
+                        <p>Rs 2000 to every woman head of the family</p>
+                      </div>
+                      <form class="user">
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="firstName2"
+                              placeholder="First Name"
+                            />
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="lastName2"
+                              placeholder="Last Name"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="phone2"
+                              placeholder="Mobile Number"
+                            />
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <label>Gender</label><br />
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input
+                                  type="radio"
+                                  class="form-check-input"
+                                  name="gender2"
+                                  checked
+                                  value="Male"
+                                />Male
+                              </label>
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input
+                                  type="radio"
+                                  class="form-check-input"
+                                  name="gender2"
+                                  value="Female"
+                                />Female
+                              </label>
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="form-check-label">
+                                <input
+                                  type="radio"
+                                  class="form-check-input"
+                                  name="gender2"
+                                  value="Other"
+                                />Other
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <select
+                              id="districtId2"
+                              name="districtId"
+                              class="form-control"
+                            ></select>
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <select
+                              id="assemblyId2"
+                              name="assemblyId"
+                              class="form-control"
+                            ></select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <select
+                              id="booth2"
+                              name="booth"
+                              class="form-control"
+                            ></select>
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <select
+                              id="occupation2"
+                              name="occupation"
+                              class="form-control"
+                            >
+                              <option value="">Select Occupation</option>
+                              <option value="Farmer">Farmer</option>
+                              <option value="Judge">Judge</option>
+                            </select>
+                          </div>
+                        </div>
+                        <label>Address</label>
+                        <div class="form-group row">
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="houseNo2"
+                              placeholder="House Number"
+                            />
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="streetName2"
+                              placeholder="Street Name"
+                            />
+                          </div>
+                          <div class="col-sm-6 mb-3 mb-sm-0 mt-2">
+                            <input
+                              type="number"
+                              class="form-control"
+                              id="pinCode2"
+                              placeholder="Pincode"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group row justify-content-center">
+                          <div class="col-sm-3 mb-3 mb-sm-0">
+                            <button
+                              class="btn btn-primary btn-user btn-block"
+                              id="saveSubmit"
+                            >
+                              Save & Submit
+                            </button>
+                          </div>
+                        </div>
+                        <hr />
+                      </form>
+                      <hr />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2020</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+    <script src="../js/baseurl.js"></script>
+    <script>
+      $("#headeRnavBar").load("nav.html");
+      // $("#accordionSidebar").load("sideNavbar.html");
+      $.ajax({
+        url: base_url + "api/v1/master/list/district",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+        type: "get",
+        async: false,
+        success: function (data) {
+          console.log("data", data);
+          let option = `<option value="">Select District</option>`;
+          data.data.map((item) => {
+            option += `<option value="${item.id}">${item.name}</option>`;
+          });
+          $("#districtId").append(option);
+          $("#districtId2").append(option);
+          // window.location.href = "otpvalidation.html";
+        },
+        error: function (error) {
+          alert("Something wnt wrong");
+        },
+      });
+
+      $("#districtId").on("change", function (event) {
+        getAssembly(event.target.value);
+      });
+      $("#districtId2").on("change", function (event) {
+        getAssembly2(event.target.value);
+      });
+      const getAssembly = (id) => {
+        $.ajax({
+          url: base_url + "api/v1/master/list/assembly?districtId=" + id,
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+          async: false,
+          type: "get",
+          success: function (data) {
+            console.log("data", data);
+            let option = `<option value="">Select Assembly</option>`;
+            data.data.map((item) => {
+              option += `<option value="${item.id}">${item.name}</option>`;
+            });
+            $("#assemblyId").append(option);
+            $("#assemblyId2").append(option);
+
+
+            // window.location.href = "otpvalidation.html";
+          },
+          error: function (error) {
+            alert("Something wnt wrong");
+          },
+        });
+      };
+      $("#assemblyId").on("change", function (event) {
+        getBooth(event.target.value);
+      });
+      // $("#assemblyId2").on("change", function (event) {
+      //   getBooth2(event.target.value);
+      // });
+      // const getAssembly2 = (id) => {
+      //   $.ajax({
+      //     url: base_url + "api/v1/master/list/assembly?districtId=" + id,
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       Authorization: "Bearer " + localStorage.getItem("token"),
+      //     },
+      //     async: false,
+      //     type: "get",
+      //     success: function (data) {
+      //       console.log("data", data);
+      //       let option = `<option value="">Select Assembly</option>`;
+      //       data.data.map((item) => {
+      //         option += `<option value="${item.id}">${item.name}</option>`;
+      //       });
+      //       $("#assemblyId2").append(option);
+
+      //       // window.location.href = "otpvalidation.html";
+      //     },
+      //     error: function (error) {
+      //       alert("Something wnt wrong");
+      //     },
+      //   });
+      // };
+      // $("#assemblyId2").on("change", function (event) {
+      //   getBooth(event.target.value);
+      // });
+      const getBooth = (id) => {
+        $.ajax({
+          url: base_url + "api/v1/master/booth/by/assembly?assemblyId=" + id,
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+          type: "get",
+          success: function (data) {
+            console.log("data", data);
+            let option = `<option value="">Select Booth</option>`;
+            data.data.map((item) => {
+              option += `<option value="${item.id}">${item.name}</option>`;
+            });
+            $("#booth").append(option);
+            $("#booth2").append(option);
+
+            // window.location.href = "otpvalidation.html";
+          },
+          error: function (error) {
+            alert("Something wnt wrong");
+          },
+        });
+      };
+      // const getBooth2 = (id) => {
+      //   $.ajax({
+      //     url: base_url + "api/v1/master/booth/by/assembly?assemblyId=" + id,
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       Authorization: "Bearer " + localStorage.getItem("token"),
+      //     },
+      //     type: "get",
+      //     success: function (data) {
+      //       console.log("data", data);
+      //       let option = `<option value="">Select Booth</option>`;
+      //       data.data.map((item) => {
+      //         option += `<option value="${item.id}">${item.name}</option>`;
+      //       });
+      //       $("#booth2").append(option);
+
+      //       // window.location.href = "otpvalidation.html";
+      //     },
+      //     error: function (error) {
+      //       alert("Something wnt wrong");
+      //     },
+      //   });
+      // };
+      $("#save").click(function () {
+        event.preventDefault();
+
+        let firstName = $("#firstName").val();
+        let lastName = $("#lastName").val();
+        let phone = $("#phone").val();
+        let districtId = $("#districtId").val();
+        let assemblyId = $("#assemblyId").val();
+        let booth = $("#booth").val();
+        let occupation = $("#occupation").val();
+        let houseNo = $("#houseNo").val();
+        let streetName = $("#streetName").val();
+        let pinCode = $("#pinCode").val();
+        var gender = $('input[name="gender"]:checked').val();
+
+        console.log(
+          "asdffdsa",
+          gender,
+          firstName,
+          phone,
+          lastName,
+          districtId,
+          assemblyId,
+          booth,
+          occupation,
+          houseNo,
+          streetName,
+          pinCode
+        );
+        $.ajax({
+          url: base_url + "api/v1/scams/add",
+          dataType: "json",
+          async: true,
+          data: JSON.stringify({
+            firstName,
+            lastName,
+            gender,
+            districtId,
+            assemblyId,
+            booth,
+            occupation,
+            houseNo,
+            streetName,
+            pinCode,
+            saveCompleted: false,
+            gruhajyothi: false,
+            gruhalakshmi: false,
+            phone,
+            id: "",
+            rrNumber: "",
+            secondScamsUsers: null,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+          type: "POST",
+          success: function (data) {
+            console.log("offerData", data);
+          },
+        });
+      });
+      $.ajax({
+        url: base_url + "api/v1/scams/get",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+        type: "get",
+        async: true,
+        // $(":radio[name='sectionRules']").val(1);
+        success: function (data) {
+          if (data.data.districtId != null) {
+            getAssembly(data.data.districtId);
+          }
+          if (data.data.assemblyId != null) {
+            getBooth(data.data.assemblyId);
+          }
+          console.log("data", data.data.districtId);
+          $("#firstName").val(data.data.firstName);
+          $("#lastName").val(data.data.lastName);
+
+          $("#districtId").val(data.data.districtId);
+          $("#assemblyId").val(data.data.assemblyId);
+          $("#booth").val(data.data.booth);
+          $("#occupation").val(data.data.occupation);
+          // $(":radio[name='gender']").val(data.data.gender);
+          $("#houseNo").val(data.data.houseNo);
+          $("#streetName").val(data.data.streetName);
+          $("#pinCode").val(data.data.pinCode);
+          $("#phone").val(data.data.phone);
+          // window.location.href = "otpvalidation.html";
+        },
+        error: function (error) {
+          alert("Something wnt wrong");
+        },
+      });
+
+      $("#saveContinue").click(function () {
+        event.preventDefault();
+        $("#display").show();
+      });
+
+      $("#gruhId").click(function () {
+        event.preventDefault();
+        $("#check").show();
+      });
+
+      $("#oncheck").on("change", function (event) {
+        event.preventDefault();
+        $("#forGruhalakshmi").show();
+      });
+
+      $("#clickNo").click(function () {
+        event.preventDefault();
+        $("#secondDiv").show();
+      });
+
+      ///////////////////////second div/////////////////////////////
+    </script>
+  </body>
+</html>
